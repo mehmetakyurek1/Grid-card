@@ -1,0 +1,83 @@
+/* Genel body */
+body {
+    background-color: #59AC77;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Grid container */
+.cards {
+    display: grid;
+    gap: 20px; /* row ve column boşluğu */
+}
+
+/* Kartlar */
+.card {
+    background-color: #FDAAAA;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Kart hover efekti */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Resimler */
+.card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Butonlar */
+.card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E45A92;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+    background-color: #3A6F43;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* Desktop */
+@media (min-width: 960px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet */
+@media (min-width: 720px) and (max-width: 959px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobil */
+@media (max-width: 719px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
